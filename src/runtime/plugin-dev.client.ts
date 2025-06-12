@@ -3,7 +3,7 @@ import { defineNuxtPlugin } from '#imports'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   const getWorkerModule = (moduleUrl: string, label: string) => {
-    return new Worker(new URL('/node_modules/monaco-editor/esm/vs/' + moduleUrl + '.js?worker', import.meta.url), {
+    return new Worker(new URL('../node_modules/monaco-editor/esm/vs/' + moduleUrl + '.js?worker', import.meta.url), {
       name: label,
       type: 'module'
     })
